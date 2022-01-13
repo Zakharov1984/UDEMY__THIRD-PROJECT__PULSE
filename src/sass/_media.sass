@@ -32,20 +32,25 @@
             margin-left: 0
             margin-top: 44px
         &__or
-            margin-left: 0
-            
+            margin-left: 0            
     .header
         justify-content: space-between
         &__logo
             margin-right: 0
         &__text
-            margin-right: 0
-    
+            margin-right: 0    
     .advantages
         &__item
             &-description
                 font-size: 12px
                 font-weight: 500
+    .consultation
+        min-height: 636px
+        &__title
+            font-size: 29px
+            line-height: 36px
+        &__subtitle
+            line-height: 25px
 
 
 @media (max-width: 767px)
@@ -58,16 +63,29 @@
         &__items
             flex-direction: column
             align-items: center
+            margin-top: 35px
         &__item:not(:first-child)
             margin-top: 35px
         &__item:not(:last-child)
             margin-right: 0
+    .consultation
+        min-height: 636px
+        &__title
+            margin-left: 0
+            text-align: center            
+        &__subtitle
+            margin-left: 0
+            text-align: center
+            line-height: 25px
+    .feed-form
+        margin: 36px auto 0
 
 
 @media (max-width: 576px)
     .container
         max-width: 100%
     .run
+        padding: 21px 0 49px
         &__text
             margin-top: 52px
             &-title
@@ -87,8 +105,7 @@
             font-size: 13px
         &__or
             &-link
-                font-size: 14px
-        
+                font-size: 14px        
     .header
         align-items: center
         flex-direction: column
@@ -99,5 +116,20 @@
         &__call-button
             padding: 21px 64px
             font-size: 15px
+    .consultation
+        min-height: 477px
+        padding: 17px 0 46px
+        &__title
+            font-size: 18px
+            line-height: 27px
+            margin-left: 0
+            text-align: center            
+        &__subtitle
+            margin-left: 0
+            text-align: center
+            font-size: 14px
+            line-height: 25px
+    .feed-form
+        margin: 14px auto 0
 
 @media (max-width: 320px)
