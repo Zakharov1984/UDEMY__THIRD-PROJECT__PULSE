@@ -1,0 +1,43 @@
+.slider
+    padding: 81px 0
+    &__box
+        position: relative
+        max-width: 947px
+        min-height: 580px
+        margin: 0 auto
+    &__img
+        max-width: 100%
+        margin: 0 auto
+    .slick-prev,
+    .slick-next
+        width: 31px
+        height: 50px
+        position: absolute
+        z-index: 1
+        top: 50%
+        transform: translateY(-50%)
+        padding: 0
+        border: none
+        background-color: #fff
+    .slick-next
+        right: 0
+    .slick-dots
+        margin-top: 20px
+        padding: 0
+        display: flex !important
+        justify-content: center
+        align-items: center
+        button
+            width: 30px
+            height: 30px
+            border: 1px solid black
+            padding: 0
+            background-color: #fff
+            border-radius: 100%
+        li:not(:last-child) button
+            margin-right: 10px 
+
+
+
+
+         
