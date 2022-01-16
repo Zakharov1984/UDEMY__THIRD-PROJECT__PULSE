@@ -1,0 +1,117 @@
+.catalog
+    padding-bottom: 79px
+    &__title
+        font-weight: 400
+    &__box
+        max-width: 944px
+        margin: 38px auto 0
+    &__item
+        width: 303px
+        height: 442px
+        padding: 20px
+        margin-top: 19px
+        border: 2px solid #E8E8E8
+        position: relative
+        text-align: center
+        &-supmenu
+            position: relative
+            z-index: 1
+            background-color: #fff
+        &-name
+            margin-top: 15px
+            font-weight: 700
+            font-size: 16px
+            line-height: 1
+            color: $COLOR_BLACK
+        &-description
+            margin-top: 15px
+            font-weight: 300
+            font-size: 14px
+            line-height: 22px
+            color: $COLOR_BLACK
+        &-more
+            border: none
+            font-weight: 500
+            font-size: 14px
+            line-height: 1
+            background-color: #fff
+            text-transform: uppercase
+            text-decoration: underline
+            color: $COLOR_RED
+            cursor: pointer
+        &-submenu
+            display: flex
+            justify-content: space-between
+            margin-top: 17px
+            padding-top: 17px 
+            border-top: 4px solid #E8E8E8
+        &-price
+            padding-top: 6px
+    &__irrelevant-price
+        font-weight: 300
+        font-size: 14px
+        line-height: 1
+        color: #555555
+        text-decoration: line-through #555555
+        text-align: left
+    &__finish-price
+        font-weight: 700
+        font-size: 20px
+        line-height: 1
+        color: $COLOR_BLACK
+    &__button-buy
+        width: 135px
+        height: 44px
+        font-size: 14px
+.item-substrate
+    padding: 16px 15px 0 36px
+    position: absolute
+    background-color: #fff
+    top: 0
+    left: 0
+    width: 100%
+    height: 351px
+    z-index: 0
+    &_active
+        z-index: 2
+    &__list
+        padding: 0
+        margin: 0
+        text-align: left
+    &__item
+        position: relative
+        margin-bottom: 10px
+        font-weight: 300
+        font-size: 14px
+        line-height: 21px
+        color: #555555
+        &::before
+            content: ''
+            position: absolute
+            width: 8px
+            height: 8px
+            top: 7px
+            left: -15px
+            background-color: $COLOR_RED
+.button-back
+    position: absolute
+    bottom: 20px
+    left: 50%
+    transform: translateX(-50%) 
+    border: none
+    border-bottom: 1px solid $COLOR_RED
+    padding: 0
+    background-color: #fff
+    font-weight: 500
+    font-size: 14px
+    line-height: 10px
+    color: $COLOR_RED
+    text-transform: uppercase
+    
+
+
+
+
+
+
+            

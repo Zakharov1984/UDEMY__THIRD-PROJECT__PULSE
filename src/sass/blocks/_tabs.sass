@@ -1,0 +1,34 @@
+.tabs
+    display: flex
+    justify-content: center
+    &__item
+        width: 223px
+        height: 52px
+        margin-top: 46px
+        border: 2px solid #D0D0D0
+        background: rgba(0, 0, 0, 0.0001)
+        transform: skewX(-30deg)
+        &_active
+            border: none
+            background-color: $COLOR_RED
+            color: #fff
+        &:not(:last-child)
+            margin-right: 10px            
+    &__link
+        display: block
+        height: 100%
+        padding: 17px 0
+        transform: skewX(30deg)
+        color: #6B6B6B
+        font-size: 18px
+        line-height: 1
+        font-weight: 400
+        text-align: center
+        text-transform: uppercase
+        text-decoration: none
+        &:hover
+            color: #6B6B6B     
+        &_active
+            color: #fff
+            &:hover
+                color: #fff
