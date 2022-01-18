@@ -1,13 +1,16 @@
 .tabs
     display: flex
     justify-content: center
+    margin-top: 46px
     &__item
         width: 223px
         height: 52px
-        margin-top: 46px
         border: 2px solid #D0D0D0
         background: rgba(0, 0, 0, 0.0001)
         transform: skewX(-30deg)
+        transition: 0.3s all
+        &:hover
+            box-shadow: 0px 0px 10px black
         &_active
             border: none
             background-color: $COLOR_RED

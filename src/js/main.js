@@ -39,13 +39,46 @@ function activeTabs() {
 activeTabs();
 
 function showSubstrate() {
-    document.querySelector('.catalog__item-more').addEventListener('click', (event) => {
-        document.querySelector('.item-substrate').classList.add('item-substrate_active');
-    });
-
-    document.querySelector('.button-back').addEventListener('click', () => {
-        document.querySelector('.item-substrate').classList.remove('item-substrate_active');
-    })
+    let catalogItemMoreElements = document.querySelectorAll('.catalog__item-more');
+    let buttonBackElements = document.querySelectorAll('.button-back');
+    for (let catalogItemMoreElement of catalogItemMoreElements) {
+        catalogItemMoreElement.addEventListener('click', (event) => {
+            event.target.parentNode.classList.add('catalog__item-supmenu_disable');
+        });
+    }
+    
+    for (let buttonBackElement of buttonBackElements) {
+        buttonBackElement.addEventListener('click', (event) => {
+            event.target.parentNode.classList.add('item-substrate_disable')
+        })
+    }
 }
 
 showSubstrate();
+
+function showContent() {
+    let tabs = document.querySelectorAll('.tabs__item');
+    let catalogBoxes = document.querySelectorAll('.catalog__box');
+    for (let tab of tabs) {
+        tab.addEventListener('click', (event) => {
+            if (event.currentTarget.id == 'fitness') {
+                for (let catalogBox of catalogBoxes) {
+                    catalogBox.classList.remove('catalog__box_active');
+                }
+                document.querySelector("[data-utensils='fitness']").classList.add('catalog__box_active');
+            } else if (event.currentTarget.id == 'run') {
+                for (let catalogBox of catalogBoxes) {
+                    catalogBox.classList.remove('catalog__box_active');
+                }
+                document.querySelector("[data-utensils='run']").classList.add('catalog__box_active');
+            } else if (event.currentTarget.id == 'triathlon') {
+                for (let catalogBox of catalogBoxes) {
+                    catalogBox.classList.remove('catalog__box_active');
+                }
+                document.querySelector("[data-utensils='triathlon']").classList.add('catalog__box_active');
+            }
+        })
+    }
+}
+
+showContent();

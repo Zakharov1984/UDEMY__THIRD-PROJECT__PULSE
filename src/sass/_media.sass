@@ -83,11 +83,21 @@
         margin: 36px auto 0
     .slider__box
         min-height: 414px
+    .reviews-item
+        flex-direction: column
+        align-items: center
+        text-align: center
+        &__img
+            margin-right: 0
+        &__comment
+            margin-top: 20px
 
 
 @media (max-width: 575px)
     .container
         max-width: 100%
+    .title
+        font-size: 22px
     .run
         padding: 21px 0 49px
         &__text
@@ -135,5 +145,11 @@
             line-height: 25px
     .feed-form
         margin: 14px auto 0
+    .reviews-item
+        margin-top: 30px
+        &__name
+            font-size: 16px
+        &__description 
+            font-size: 14px
 
 @media (max-width: 320px)
