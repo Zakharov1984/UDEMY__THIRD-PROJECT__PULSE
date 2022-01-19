@@ -17,19 +17,24 @@
         padding: 20px
         margin-top: 19px
         border: 2px solid #E8E8E8
-        position: relative
+        overflow: hidden
         text-align: center
+        &-wrapper
+            display: flex
+            width: calc(200% + 40px)
         &-img
             display: block
             margin: 0 auto
             max-width: 100%
             height: 200px
         &-supmenu
-            position: relative
-            z-index: 3
-            background-color: #fff
-            &_disable
-                z-index: 1
+            width: 50%
+            margin-right: 0
+            transform: translateX(-100%)
+            transition: 0.5s all
+            &_active
+                transform: translateX(0%)
+                margin-right: 20px
         &-name
             margin-top: 15px
             font-weight: 700
@@ -79,16 +84,16 @@
         height: 44px
         font-size: 14px
 .item-substrate
-    padding: 16px 15px 0 36px
-    position: absolute
-    background-color: #fff
-    top: 0
-    left: 0
-    width: 100%
-    height: 351px
-    z-index: 2
-    &_disable
-        z-index: 0
+    width: 50%
+    padding-right: 20px
+    padding-left: 20px
+    margin-left: 20px
+    transform: translateX(0%)
+    transition: 0.5s all
+    &_active
+        transform: translateX(-100%)
+        margin-left: 0
+        
     &__list
         padding: 0
         margin: 0
@@ -110,9 +115,9 @@
             background-color: $COLOR_RED
 .button-back
     position: absolute
-    bottom: 20px
+    bottom: 0
     left: 50%
-    transform: translateX(-50%) 
+    transform: translateX( calc(-50% - 10px) ) 
     border: none
     border-bottom: 1px solid $COLOR_RED
     padding: 0

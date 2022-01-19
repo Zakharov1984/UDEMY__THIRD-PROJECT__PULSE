@@ -39,17 +39,19 @@ function activeTabs() {
 activeTabs();
 
 function showSubstrate() {
-    let catalogItemMoreElements = document.querySelectorAll('.catalog__item-more');
-    let buttonBackElements = document.querySelectorAll('.button-back');
-    for (let catalogItemMoreElement of catalogItemMoreElements) {
-        catalogItemMoreElement.addEventListener('click', (event) => {
-            event.target.parentNode.classList.add('catalog__item-supmenu_disable');
-        });
+    let itemMoreItems = document.querySelectorAll('.catalog__item-more');
+    let buttoBackEtems = document.querySelectorAll('.button-back');
+    for (let itemMoreItem of itemMoreItems) {
+        itemMoreItem.addEventListener('click', event => {
+            event.target.parentNode.classList.remove('catalog__item-supmenu_active');
+            event.target.parentNode.nextElementSibling.classList.add('item-substrate_active');
+        })
     }
-    
-    for (let buttonBackElement of buttonBackElements) {
-        buttonBackElement.addEventListener('click', (event) => {
-            event.target.parentNode.classList.add('item-substrate_disable')
+
+    for (let buttoBackEtem of buttoBackEtems) {
+        buttoBackEtem.addEventListener('click', event => {
+            event.target.parentNode.classList.remove('item-substrate_active');
+            event.target.parentNode.previousElementSibling.classList.add('catalog__item-supmenu_active');
         })
     }
 }
