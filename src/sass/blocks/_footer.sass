@@ -1,0 +1,44 @@
+.footer
+    min-height: 183px
+    position: relative
+    &-info
+        position: absolute
+        top: 0
+        left: 50%
+        z-index: 1
+        transform: translateX(-50%)
+        width: 354px
+        min-height: 227px
+        padding: 30px 0
+        background-color: $COLOR_RED
+        text-align: center
+        &__address
+            font-weight: 500
+            margin: 0
+            font-size: 20px
+            line-height: 1
+            color: #fff
+        &__phone
+            display: block
+            margin-top: 36px
+            font-weight: 700
+            font-size: 20px
+            line-height: 1
+            color: #fff
+            text-decoration: none
+            &:hover
+                color: #fff
+        &__social
+            display: flex
+            justify-content: center
+            margin-top: 36px
+            &-item
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 53px
+                height: 53px
+                border: 2px solid #fff
+                border-radius: 50%
+                &:not(:last-child)
+                    margin-right: 27px
