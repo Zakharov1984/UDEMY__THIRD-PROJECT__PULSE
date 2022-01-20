@@ -71,6 +71,7 @@
         &__social-item
             width: 45px
             height: 45px
+
 @media (max-width: 767px)
     .container
         max-width: 540px
@@ -97,8 +98,8 @@
             line-height: 25px
     .feed-form
         margin: 36px auto 0
-    .slider__box
-        min-height: 414px
+    .slider
+        padding: 40px 0
     .reviews-item
         flex-direction: column
         align-items: center
@@ -107,6 +108,16 @@
             margin-right: 0
         &__comment
             margin-top: 20px
+    .tabs
+        &__link
+            font-size: 16px
+    .catalog
+        min-height: 679px
+        padding-bottom: 50px
+        &__box
+            justify-content: center
+
+
 
 @media (max-width: 575px)
     .container
@@ -166,6 +177,20 @@
             font-size: 16px
         &__description 
             font-size: 14px
+    .tabs
+        flex-direction: column
+        align-items: center
+        margin-top: 0
+        &__item
+            margin-top: 20px
+            transform: skewX(0deg)
+            &:not(:last-child)
+                margin-right: 0 
+        &__link
+            transform: skewX(0deg)
+    .catalog
+        &__box
+            margin-top: 12px
     .map
         display: none
     .footer-info
