@@ -84,3 +84,35 @@ function showContent() {
 }
 
 showContent();
+
+function showModal() {
+    document.querySelectorAll('#consultation').forEach(element => {
+        element.addEventListener('click', (event) => {
+            document.querySelector('.overlay').classList.add('overlay_active');
+            document.querySelector('[data-modal="consultation"]').classList.add('modal_active');       
+        })
+    })
+
+    document.querySelectorAll('.catalog__button-buy').forEach(element => {
+        element.addEventListener('click', event => {
+            document.querySelector('.overlay').classList.add('overlay_active');
+            document.querySelector('[data-modal="order"]').classList.add('modal_active');
+            
+        })
+    })
+
+    function closeModal() {
+        document.querySelectorAll('.modal__close').forEach(element => {
+            element.addEventListener('click', event => {
+                document.querySelector('.overlay').classList.remove('overlay_active');
+                document.querySelector('[data-modal="consultation"]').classList.remove('modal_active');
+                document.querySelector('[data-modal="order"]').classList.remove('modal_active');
+
+            })
+        })
+    }
+
+    closeModal();
+}
+
+showModal();

@@ -23,7 +23,7 @@
                 </div>
                 <div class="header__contacts">
                     <a href="tel:+74999228974" class="header__number">+7 (499) 922-89-74</a>
-                    <button class="header__call-button button">заказать звонок</button>
+                    <button class="header__call-button button" id="consultation">заказать звонок</button>
                 </div>
             </header>
             <div class="run__wrapper">
@@ -45,7 +45,7 @@
                         <div class="run__item-text">Ответим на все вопросы</div>
                     </div>
                 </div>
-                <button class="run__order-button button">заказать консультацию</button>
+                <button class="run__order-button button" id="consultation">заказать консультацию</button>
                 <div class="run__or">или <a href="#" class="run__or-link">ПЕРЕЙТИ <sub>_</sub>В<sub>_</sub> КАТАЛОГ</a></div>
             </div>
         </div>
@@ -156,7 +156,7 @@
                     <div class="catalog__item-wrapper">
                         <div class="catalog__item-supmenu catalog__item-supmenu_active">
                             <img src="img/heart_rate_monitor/heart_rate_monitor.jpg" alt="" class="catalog__item-img">
-                            <div class="catalog__item-name">Пульсометр Polar FT1</div>
+                            <div class="catalog__item-name">Пульсометр Polar FT2</div>
                             <div class="catalog__item-description">
                                 Для первых шагов в тренировках, основанных на сердечном ритме
                             </div>
@@ -192,7 +192,7 @@
                     <div class="catalog__item-wrapper">
                         <div class="catalog__item-supmenu catalog__item-supmenu_active">
                             <img src="img/heart_rate_monitor/heart_rate_monitor.jpg" alt="" class="catalog__item-img">
-                            <div class="catalog__item-name">Пульсометр Polar FT1</div>
+                            <div class="catalog__item-name">Пульсометр Polar FT3</div>
                             <div class="catalog__item-description">
                                 Для первых шагов в тренировках, основанных на сердечном ритме
                             </div>
@@ -228,7 +228,7 @@
                     <div class="catalog__item-wrapper">
                         <div class="catalog__item-supmenu catalog__item-supmenu_active">
                             <img src="img/heart_rate_monitor/heart_rate_monitor.jpg" alt="" class="catalog__item-img">
-                            <div class="catalog__item-name">Пульсометр Polar FT1</div>
+                            <div class="catalog__item-name">Пульсометр Polar FT4</div>
                             <div class="catalog__item-description">
                                 Для первых шагов в тренировках, основанных на сердечном ритме
                             </div>
@@ -264,7 +264,7 @@
                     <div class="catalog__item-wrapper">
                         <div class="catalog__item-supmenu catalog__item-supmenu_active">
                             <img src="img/heart_rate_monitor/heart_rate_monitor.jpg" alt="" class="catalog__item-img">
-                            <div class="catalog__item-name">Пульсометр Polar FT1</div>
+                            <div class="catalog__item-name">Пульсометр Polar FT5</div>
                             <div class="catalog__item-description">
                                 Для первых шагов в тренировках, основанных на сердечном ритме
                             </div>
@@ -300,7 +300,7 @@
                     <div class="catalog__item-wrapper">
                         <div class="catalog__item-supmenu catalog__item-supmenu_active">
                             <img src="img/heart_rate_monitor/heart_rate_monitor.jpg" alt="" class="catalog__item-img">
-                            <div class="catalog__item-name">Пульсометр Polar FT1</div>
+                            <div class="catalog__item-name">Пульсометр Polar FT6</div>
                             <div class="catalog__item-description">
                                 Для первых шагов в тренировках, основанных на сердечном ритме
                             </div>
@@ -338,7 +338,7 @@
                     <div class="catalog__item-wrapper">
                         <div class="catalog__item-supmenu catalog__item-supmenu_active">
                             <img src="img/heart_rate_monitor/heart_rate_monitor.jpg" alt="" class="catalog__item-img">
-                            <div class="catalog__item-name">Пульсометр Polar FT1</div>
+                            <div class="catalog__item-name">Пульсометр Polar FT7</div>
                             <div class="catalog__item-description">
                                 Для первых шагов в тренировках, основанных на сердечном ритме
                             </div>
@@ -374,7 +374,7 @@
                     <div class="catalog__item-wrapper">
                         <div class="catalog__item-supmenu catalog__item-supmenu_active">
                             <img src="img/heart_rate_monitor/heart_rate_monitor.jpg" alt="" class="catalog__item-img">
-                            <div class="catalog__item-name">Пульсометр Polar FT1</div>
+                            <div class="catalog__item-name">Пульсометр Polar FT8</div>
                             <div class="catalog__item-description">
                                 Для первых шагов в тренировках, основанных на сердечном ритме
                             </div>
@@ -412,7 +412,7 @@
                     <div class="catalog__item-wrapper">
                         <div class="catalog__item-supmenu catalog__item-supmenu_active">
                             <img src="img/heart_rate_monitor/heart_rate_monitor.jpg" alt="" class="catalog__item-img">
-                            <div class="catalog__item-name">Пульсометр Polar FT1</div>
+                            <div class="catalog__item-name">Пульсометр Polar FT9</div>
                             <div class="catalog__item-description">
                                 Для первых шагов в тренировках, основанных на сердечном ритме
                             </div>
@@ -504,6 +504,35 @@
             </div>
         </div>
     </footer>
+    <div class="overlay">
+        <div class="modal" data-modal="consultation">
+            <div class="modal__suptitle">Просто заполните форму заявки</div>
+            <div class="modal__description">и мы перезвоним вам в течении 10 минут</div>
+            <form action="#" class="feed-form modal__feed-form">
+                <input type="text" class="feed-form__item" placeholder="Ваше имя">
+                <input type="number" class="feed-form__item" placeholder="Ваш телефон">
+                <input type="email" class="feed-form__item" placeholder="Ваш E-mail">
+                <button type="submit" class="feed-form__button button">заказать кОНСУЛЬТАЦИЮ</button>
+            </form>
+            <button class="modal__close"></button>
+        </div>
+        <div class="modal" data-modal="order">
+            <div class="modal__suptitle">Ваш заказ:</div>
+            <div class="modal__description">Пульсометр Polar FT1</div>
+            <form action="#" class="feed-form modal__feed-form">
+                <input type="text" class="feed-form__item" placeholder="Ваше имя">
+                <input type="number" class="feed-form__item" placeholder="Ваш телефон">
+                <input type="email" class="feed-form__item" placeholder="Ваш E-mail">
+                <button type="submit" class="feed-form__button button">купить</button>
+            </form>
+            <button class="modal__close"></button>
+        </div>
+        <div class="modal" data-modal="thanks">
+            <div class="modal__suptitle">Спасибо за вашу заявку!</div>
+            <div class="modal__description">Наш менеджер свяжется с вами<br>в ближайшее время!</div>
+            <button class="modal__close"></button>
+        </div>
+    </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>

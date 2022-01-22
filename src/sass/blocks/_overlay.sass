@@ -1,0 +1,57 @@
+.overlay
+    display: none
+    position: fixed
+    top: 0
+    z-index: 10000
+    width: 100%
+    min-height: 100vh
+    background: rgba(0, 0, 0, 0.56)
+    &_active
+        display: block
+.modal
+    display: none
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 382px
+    padding: 35px 28px 40px
+    background-color: #F2F2F2
+    &_active
+        display: block
+    &__suptitle
+        font-weight: 700
+        font-size: 19px
+        line-height: 19px
+        color: $COLOR_BLACK
+        text-align: center
+    &__description
+        margin-top: 10px
+        font-weight: 700
+        font-size: 14px
+        line-height: 14px
+        color: $COLOR_BLACK
+        text-align: center
+    &__feed-form
+        margin: 26px auto 0
+    &__close
+        position: absolute
+        top: -5px   
+        right: -42px
+        padding: 0
+        border: none
+        width: 26px
+        height: 26px
+        background: none
+        &::before, &::after    
+            content: ''
+            display: block
+            position: absolute
+            top: 50%
+            transform: translateX(-50%)
+            transform: rotate(45deg)
+            width: 100%
+            height: 3px
+            background-color: $COLOR_RED            
+        &::after
+            transform: rotate(-45deg)
