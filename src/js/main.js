@@ -93,11 +93,13 @@ function showModal() {
         })
     })
 
-    document.querySelectorAll('.catalog__button-buy').forEach(element => {
+    document.querySelectorAll('.catalog__item').forEach(element => {
         element.addEventListener('click', event => {
+            document.querySelector('[data-modal="order"] .modal__description').innerText =
+            event.currentTarget.querySelector('.catalog__item-name').textContent;
             document.querySelector('.overlay').classList.add('overlay_active');
             document.querySelector('[data-modal="order"]').classList.add('modal_active');
-            
+
         })
     })
 
