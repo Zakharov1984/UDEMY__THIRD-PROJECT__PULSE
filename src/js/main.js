@@ -86,10 +86,10 @@ function showContent() {
 showContent();
 
 function showModal() {
-    document.querySelectorAll('#consultation').forEach(element => {
+    document.querySelectorAll('[data-modal="consultation"]').forEach(element => {
         element.addEventListener('click', (event) => {
             document.querySelector('.overlay').classList.add('overlay_active');
-            document.querySelector('[data-modal="consultation"]').classList.add('modal_active');       
+            document.querySelector('#consultation').classList.add('modal_active');       
         })
     })
 
