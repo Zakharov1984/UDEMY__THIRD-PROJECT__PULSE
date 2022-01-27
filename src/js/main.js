@@ -38,26 +38,6 @@ function activeTabs() {
 
 activeTabs();
 
-function showSubstrate() {
-    let itemMoreItems = document.querySelectorAll('.catalog__item-more');
-    let buttoBackEtems = document.querySelectorAll('.button-back');
-    for (let itemMoreItem of itemMoreItems) {
-        itemMoreItem.addEventListener('click', event => {
-            event.target.parentNode.classList.remove('catalog__item-supmenu_active');
-            event.target.parentNode.nextElementSibling.classList.add('item-substrate_active');
-        })
-    }
-
-    for (let buttoBackEtem of buttoBackEtems) {
-        buttoBackEtem.addEventListener('click', event => {
-            event.target.parentNode.classList.remove('item-substrate_active');
-            event.target.parentNode.previousElementSibling.classList.add('catalog__item-supmenu_active');
-        })
-    }
-}
-
-showSubstrate();
-
 function showContent() {
     let tabs = document.querySelectorAll('.tabs__item');
     let catalogBoxes = document.querySelectorAll('.catalog__box');
@@ -85,6 +65,27 @@ function showContent() {
 
 showContent();
 
+function showSubstrate() {
+    let itemMoreItems = document.querySelectorAll('.catalog__item-more');
+    let buttoBackEtems = document.querySelectorAll('.button-back');
+    for (let itemMoreItem of itemMoreItems) {
+        itemMoreItem.addEventListener('click', event => {
+            event.target.parentNode.classList.remove('catalog__item-supmenu_active');
+            event.target.parentNode.nextElementSibling.classList.add('item-substrate_active');
+        })
+    }
+
+    for (let buttoBackEtem of buttoBackEtems) {
+        buttoBackEtem.addEventListener('click', event => {
+            event.target.parentNode.classList.remove('item-substrate_active');
+            event.target.parentNode.previousElementSibling.classList.add('catalog__item-supmenu_active');
+        })
+    }
+}
+
+showSubstrate();
+
+
 function showModal() {
     document.querySelectorAll('[data-modal="consultation"]').forEach(element => {
         element.addEventListener('click', (event) => {
@@ -93,10 +94,10 @@ function showModal() {
         })
     })
 
-    document.querySelectorAll('.catalog__item').forEach(element => {
+    document.querySelectorAll('.catalog__button-buy').forEach(element => {
         element.addEventListener('click', event => {
             document.querySelector('[data-modal="order"] .modal__description').innerText =
-            event.currentTarget.querySelector('.catalog__item-name').textContent;
+            event.target.parentNode.parentNode.querySelector('.catalog__item-name').textContent;
             document.querySelector('.overlay').classList.add('overlay_active');
             document.querySelector('[data-modal="order"]').classList.add('modal_active');
 
