@@ -67,7 +67,7 @@ nameFormElements.forEach(element => {
                 addElementError(event.target);
             }
         } else {
-            if (document.querySelector('.feed-form__error-msg')) {
+            if (document.querySelector('.feed-form__error-msg')) { // проверка, есть ли элемент с ошибкой на странице (если его нет, метод .querySelector() - возвращает null, в итоге метод .remove() не найдется и код встанет с ошибкой и дальше не пойдет выполнение, нужный функционал не выполнится).
                 document.querySelector('.feed-form__error-msg').remove();
             }
             event.target.classList.remove('feed-form__item_invalid');
@@ -83,7 +83,7 @@ phoneFormElements.forEach(element => {
                 addElementError(event.target);
             }
         } else {
-            if (document.querySelector('.feed-form__error-msg')) {
+            if (document.querySelector('.feed-form__error-msg')) { // проверка, есть ли элемент с ошибкой на странице (если его нет, метод .querySelector() - возвращает null, в итоге метод .remove() не найдется и код встанет с ошибкой и дальше не пойдет выполнение, нужный функционал не выполнится).
                 document.querySelector('.feed-form__error-msg').remove();
             }
             event.target.classList.remove('feed-form__item_invalid');
@@ -99,7 +99,7 @@ emailFormElements.forEach(element => {
                 addElementError(event.target);
             }
         } else {
-            if (document.querySelector('.feed-form__error-msg')) {
+            if (document.querySelector('.feed-form__error-msg')) { // проверка, есть ли элемент с ошибкой на странице (если его нет, метод .querySelector() - возвращает null, в итоге метод .remove() не найдется и код встанет с ошибкой и дальше не пойдет выполнение, нужный функционал не выполнится).
                 document.querySelector('.feed-form__error-msg').remove();
             }
             event.target.classList.remove('feed-form__item_invalid');
