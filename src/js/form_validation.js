@@ -6,6 +6,10 @@ let regExpName = /^[a-zа-яёЁ]+$/i;
 let regExpPhone = /^\+7\(\d{3}\)\d{3}-\d{4}$/;
 let regExpEmail = /^[\w._-]+@\w+\.[a-z]{2,4}$/i;
 
+
+/**
+ * Отменяет действие по умолчанию для отправки формы.
+ */
 function formValidation () {
     document.querySelectorAll('.feed-form').forEach(element => {
         element.addEventListener('submit', function(event) {
@@ -17,7 +21,8 @@ function formValidation () {
 formValidation();
 
 /**
- * Когда модульное окно с фомой закрывают, функция очищает поля формы, удаляет элементы с ошибками и классы указывающие на ошибку или правильность ввода в поле.
+ * Когда модульное окно с фомой закрывают, функция очищает поля формы,
+ * удаляет элементы с ошибками и классы указывающие на ошибку или правильность ввода в поле.
  */
 function clearingForm() {
     closeFormElements.forEach(element => {
@@ -45,7 +50,10 @@ function clearingForm() {
 clearingForm();
 
 /**
- * Функция вставляет элемент с описанием ошибки, в зависимости на каком элементе строка не прошла валидацию и добавляет класс указывающий на ошибку в поле.
+ * Функция вставляет элемент с описанием ошибки, 
+ * в зависимости на каком элементе строка не прошла валидацию и 
+ * добавляет класс указывающий на ошибку в поле.
+ * @param {оbject} element - получает объект на котором строка не прошла валидацию.
  */
 function addElementError(element) {
     if (element.getAttribute('name') === 'name') {

@@ -15,6 +15,10 @@ $(document).ready(function(){
     });
 });
 
+/**
+ * Функция обеспечивает правильную работу с вкладками продуктов, 
+ * добавляя классы активности для активного элемента и удаляя для всех остальных.
+ */
 function activeTabs() {
     let tabs = document.querySelectorAll('.tabs__item');
     let childrenTabs = document.querySelectorAll('.tabs__link');
@@ -38,6 +42,9 @@ function activeTabs() {
 
 activeTabs();
 
+/**
+ * Функция отображает нужный блок с продуктами, в зависимости, какая вкладка активна.
+ */
 function showContent() {
     let tabs = document.querySelectorAll('.tabs__item');
     let catalogBoxes = document.querySelectorAll('.catalog__box');
@@ -65,6 +72,9 @@ function showContent() {
 
 showContent();
 
+/**
+ * Функция предназначена для показа блока описания прордукта, возврата на блок с изображением.
+ */
 function showSubstrate() {
     let itemMoreItems = document.querySelectorAll('.catalog__item-more');
     let buttoBackEtems = document.querySelectorAll('.button-back');
@@ -86,6 +96,9 @@ function showSubstrate() {
 showSubstrate();
 
 
+/**
+ * Функция показывает модальные окна, в зависимости на каком элементе сработало событие.
+ */
 function showModal() {
     document.querySelectorAll('[data-modal="consultation"]').forEach(element => {
         element.addEventListener('click', (event) => {
@@ -104,6 +117,9 @@ function showModal() {
         })
     })
 
+    /**
+     * Функция закрывает модальное окно.
+     */
     function closeModal() {
         document.querySelectorAll('.modal__close').forEach(element => {
             element.addEventListener('click', event => {
